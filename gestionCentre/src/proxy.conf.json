@@ -1,0 +1,14 @@
+{
+  "/Boutique-service": {
+    "target": "http://localhost:8132",
+    "secure": false
+  },
+  "/Centre-service": {
+    "target": "http://localhost:8131",
+    "secure": false
+  },
+  "/Produit-service": {
+    "target": "http://localhost:8130",
+    "secure": false
+  }
+}

@@ -1,0 +1,93 @@
+
+<div class="container-fluid">
+  <app-navbar></app-navbar>
+
+  <!-- Breadcrumb Start -->
+  <div class="row px-xl-5">
+    <div class="col-12">
+      <nav class="breadcrumb bg-light mb-30">
+        <a class="breadcrumb-item text-dark" routerLink="">Home</a>
+        <a class="breadcrumb-item text-dark" routerLink="">Centre</a>
+      </nav>
+    </div>
+  </div>
+  <!-- Breadcrumb End -->
+
+  <div class="container-fluid " >
+    <h2 class="section-title position-relative text-uppercase mx-xl-5 mb-4"><span class="bg-secondary pr-3">CENTRE</span></h2>
+    <div class="row px-xl-5" >
+      <div class="col-lg-6 mb-5" >
+        <div class="contact-form bg-light p-30" style="color: #212529" >
+          <div id="success">
+            <h2>Ajouter une nouvelle centre</h2>
+            <form #formCentre="ngForm" (ngSubmit)="addcentre(formCentre)" class="form-group row">
+              <div class="col-12 d-flex justify-content-center"> <!-- Ligne pour les champs d'entrée -->
+                <div class="col-3 mx-auto">
+                  <label for="nom" class="form-label">Nom du centre</label>
+                  <div class="input-group">
+                    <input type="text" id="nom" ngModel name="nom" required minlength="3" pattern="[a-zA-Z]*" #nom="ngModel" class="form-control bg-white dark:text-gray-100 border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500" placeholder="Nom du centre" style="height: 40px; font-size: 12px;">
+                  </div>
+                </div>
+                <div class="col-3 mx-auto">
+                  <label for="adresse" class="form-label">Adresse du centre</label>
+                  <div class="input-group">
+                    <input type="text"  id="adresse" ngModel name="adresse" required minlength="3" pattern="[a-zA-Z]*" #adresse="ngModel" class="form-control bg-white dark:text-gray-100 border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500" placeholder="Adresse" style="height: 40px; font-size: 12px;">
+                  </div>
+                </div>
+              </div>
+              <div class="col-12 d-flex justify-content-center mt-3"> <!-- Ligne pour le bouton avec un espace vertical (mt-3) -->
+                <div class="col-6">
+                  <button type="submit" class="btn bg-primary text-white"><strong>Ajouter</strong></button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-6 mb-8">
+        <div class="bg-light p-30 mb-30">
+          <h2>Liste des centres</h2>
+
+
+          <table class="table-bordered">
+            <thead>
+            <tr style="color: #212529;">
+              <th>idCentre</th>
+              <th>nom Centre</th>
+              <th>Adresse</th>
+              <th>Action</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr *ngFor="let centre  of listcentre">
+              <td>{{centre.idCentre}}</td>
+              <td>{{centre.nom}}</td>
+              <td>{{centre.adresse}}</td>
+              <td style="width: 10%;">
+                <a   [routerLink]="['/admin/updatecentre',centre.idCentre]"class="table-link text-primary" >
+            <span class="fa-stack" >
+              <i class="fa fa-square fa-stack-2x"></i>
+              <i class="fa fa-pencil fa-stack-1x fa-inverse"></i>
+            </span>
+                </a>
+                <a  class="table-link text-danger" (click)="delete(centre.idCentre , i)">
+            <span class="fa-stack">
+              <i class="fa fa-square fa-stack-2x"></i>
+              <i class="fa fa-trash-o fa-stack-1x fa-inverse"></i>
+            </span>
+                </a>
+              </td>
+            </tr>
+            </tbody>
+          </table>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <app-footer></app-footer>
+</div>
+
+<!-- Back to Top -->
+<a href="#" class="btn btn-primary back-to-top"><i class="fa fa-angle-double-up"></i></a>

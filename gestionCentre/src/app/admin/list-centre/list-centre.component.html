@@ -1,0 +1,85 @@
+<!--<link-->
+<!--&lt;!&ndash;  href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css"&ndash;&gt;-->
+<!--  rel="stylesheet">-->
+<!--<div class="card shadow mb-4 mx-2">-->
+<!--  <div class="card-header py-3">-->
+<!--    <div class="search-container mb-3 text-center">-->
+<!--      <label for="searchInput" class="sr-only">Rechercher</label>-->
+<!--      <div class="input-group">-->
+<!--        <input type="text" id="searchInput" placeholder="Rechercher..." class="form-control small-search-input">-->
+<!--        <div class="input-group-append">-->
+<!--      <span class="input-group-text bg-primary">-->
+<!--        <i class="fa fa-search text-white"></i>-->
+<!--      </span>-->
+<!--        </div>-->
+<!--      </div>-->
+<!--    </div>-->
+<!--    <div class="card-header py-3 text-center">-->
+<!--      <form #formCentre="ngForm" (ngSubmit)="addcentre(formCentre)" class="form-group row">-->
+<!--        <div class="col-12 d-flex justify-content-center"> &lt;!&ndash; Ligne pour les champs d'entrée &ndash;&gt;-->
+<!--          <div class="col-3 mx-auto">-->
+<!--            <label for="nom" class="form-label">Nom du centre</label>-->
+<!--            <div class="input-group">-->
+<!--              <input type="text" id="nom" ngModel name="nom" required minlength="3" pattern="[a-zA-Z]*" #nom="ngModel" class="form-control bg-white dark:text-gray-100 border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500" placeholder="Nom du centre" style="height: 40px; font-size: 12px;">-->
+<!--            </div>-->
+<!--          </div>-->
+<!--          <div class="col-3 mx-auto">-->
+<!--            <label for="adresse" class="form-label">Adresse du centre</label>-->
+<!--            <div class="input-group">-->
+<!--              <input type="text"  id="adresse" ngModel name="adresse" required minlength="3" pattern="[a-zA-Z]*" #adresse="ngModel" class="form-control bg-white dark:text-gray-100 border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500" placeholder="Adresse" style="height: 40px; font-size: 12px;">-->
+<!--            </div>-->
+<!--          </div>-->
+<!--        </div>-->
+<!--        <div class="col-12 d-flex justify-content-center mt-3"> &lt;!&ndash; Ligne pour le bouton avec un espace vertical (mt-3) &ndash;&gt;-->
+<!--          <div class="col-6">-->
+<!--            <button type="submit" class="btn bg-primary text-white"><strong>Ajouter</strong></button>-->
+<!--          </div>-->
+<!--        </div>-->
+<!--      </form>-->
+<!--    </div>-->
+<!--  </div>-->
+<!--</div>-->
+
+
+
+<!--<div class="table-responsive">-->
+<!--  <table class="table table-bordered" id="dataTable">-->
+<!--    <thead>-->
+<!--    <tr>-->
+<!--      <th>idCentre</th>-->
+<!--      <th>nom Centre</th>-->
+<!--      <th>Adresse</th>-->
+
+<!--      <th>Action</th>-->
+<!--    </tr>-->
+<!--    </thead>-->
+<!--    <tbody *ngFor="let centre of listcentre ">-->
+<!--    <tr>-->
+<!--      <td>{{centre.idCentre}}</td>-->
+<!--      <td>{{centre.nom}}</td>-->
+<!--      <td>{{centre.adresse}}</td>-->
+
+<!--      <td style="width: 10%;">-->
+<!--        <a   [routerLink]="['/admin/updatecentre',centre.idCentre]"class="table-link text-primary" >-->
+<!--            <span class="fa-stack" >-->
+<!--              <i class="fa fa-square fa-stack-2x"></i>-->
+<!--              <i class="fa fa-pencil fa-stack-1x fa-inverse"></i>-->
+<!--            </span>-->
+<!--        </a>-->
+<!--        <a  class="table-link text-danger" (click)="delete(centre.idCentre , i)">-->
+<!--            <span class="fa-stack">-->
+<!--              <i class="fa fa-square fa-stack-2x"></i>-->
+<!--              <i class="fa fa-trash-o fa-stack-1x fa-inverse"></i>-->
+<!--            </span>-->
+<!--        </a>-->
+<!--      </td>-->
+<!--    </tr>-->
+<!--    </tbody>-->
+<!--  </table>-->
+<!--</div>-->
+
+
+
+
+
+

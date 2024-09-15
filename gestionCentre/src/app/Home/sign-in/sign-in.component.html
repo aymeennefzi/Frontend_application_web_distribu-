@@ -1,0 +1,69 @@
+
+
+<div class="container-fluid">
+
+  <div class="row">
+
+    <div class="col-6 vh-100 d-flex align-items-center justify-content-center background" id="myCenteredDiv">
+      <!-- Contenu de la première div -->
+      <div class="box text-center text-primary">
+        <h3 class="m-2 text-primary">N'avez-vous pas <br> de compte ?</h3>
+        <h6 class="m-2 text-white">Pas besoin de perdre du temps sur cette page, <br> créons un compte pour vous</h6>
+        <button routerLink="/signUp" type="button" class="btn btn-outline-primary m-2 p-2">Créer un compte</button>
+      </div>
+    </div>
+    <div class="col-6 vh-100 d-flex align-items-center justify-content-center">
+      <div class="col-sm-10 col-xl-8 m-auto  ">
+        <!-- Start Bar  -->
+        <div class="row">
+          <div class="col-1">
+            <svg routerLink="/home" stroke="currentColor" class="text-primary" fill="currentColor" stroke-width="0" viewBox="0 0 512 512" height="1em" width="1em"><path d="M217.9 256L345 129c9.4-9.4 9.4-24.6 0-33.9-9.4-9.4-24.6-9.3-34 0L167 239c-9.1 9.1-9.3 23.7-.7 33.1L310.9 417c4.7 4.7 10.9 7 17 7s12.3-2.3 17-7c9.4-9.4 9.4-24.6 0-33.9L217.9 256z"></path></svg>
+          </div>
+          <div class="col-1">
+            <a routerLink="/home" class="text-primary" >Home</a>
+          </div>
+          <!-- End  Bar  -->
+        </div >
+        <h4 class="fs-3 mt-4 ">Se connecter à E-Commerce</h4>
+        <p class="lead mb-4">Connectez-vous à votre compte </p>
+        <!-- Form START -->
+        <form [formGroup]="formSignIn" (ngSubmit)="login()" >
+          <!-- Email -->
+          <div class="mb-4">
+            <div class="input-group">
+                <span class="input-group-text bg-light rounded-start border-0 text-secondary px-3">
+                  <i class="bi bi-envelope-fill"></i>
+                </span>
+              <input type="text" class="form-control bg-light dark:text-gray-100 border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-4500 dark:placeholder-gray-300" placeholder="Name@E-Commerce.com" id="email" formControlName="email" style="height: 40px; font-size: 12px;">
+            </div>
+          </div>
+          <!-- Password -->
+          <div class="mb-4">
+            <div class="input-group input-group-lg">
+              <input type="password" class="form-control bg-light dark:text-gray-100 border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700
+              dark:border-gray-4500 dark:placeholder-gray-300" placeholder="Mot de passe" id="Mot de passe" formControlName="password" style="height: 40px; font-size: 12px;">
+            </div>
+          </div>
+          <!-- Check box -->
+
+          <!-- Button -->
+          <div class="align-items-center mt-0">
+            <div class="d-grid">
+              <button class="btn btn-primary p-2" type="submit">Se connecter</button>
+            </div>
+          </div>
+        </form>
+        <div class="flex justify-center d-flex justify-content-between m-3"><p class="text-gray-500 dark:text-white">Êtes-vous nouveau ici ?</p><a routerLink="/signUp" class="text-primary" >Sign up</a></div>
+      </div>
+      <!-- Form END -->
+    </div>
+    <div class="col-3"></div>
+
+  </div> <!-- Row END -->
+</div>
+
+
+
+
+
+
